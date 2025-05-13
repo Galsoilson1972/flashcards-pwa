@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App de Flashcards</title>
+  <link rel="manifest" href="/flashcards-pwa/manifest.json">
+  <meta name="theme-color" content="#007bff" />
+</head>
+<body>
+  <h1>Flashcards PWA</h1>
+  <p>Aplicação pronta para funcionar como PWA no GitHub Pages.</p>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/flashcards-pwa/sw.js')
+        .then(reg => console.log('Service Worker registrado'))
+        .catch(err => console.error('Erro ao registrar SW:', err));
+    }
+  </script>
+</body>
+</html>
